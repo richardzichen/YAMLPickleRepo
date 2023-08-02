@@ -1,0 +1,24 @@
+---
+taskVecSize: 4
+dataHeaders:
+  - passenger_count
+  - payment_type
+  - rate_code
+  - KM Travelled
+dataType: SPLIT
+numTraining: 20000
+numTestSets: 5
+numTests: 10
+numDPs: 20
+numSimulations: 1000
+resources:
+  Van1: [8, 1, 1, 1.1]
+  Van2: [8, 0, 1, 1.1]
+  Van3: [6, 1, 1, 1.2]
+  Van4: [6, 0, 0, 1.2]
+  Car1: [4, 1, 1, 1.3]
+  Car2: [4, 0, 1, 1.3]
+  Car3: [2, 1, 1, 1.4]
+  Car4: [2, 0, 0, 1.4]
+  Car5: [1, 1, 1, 1.5]
+  Car6: [1, 0, 1, 1.5]
