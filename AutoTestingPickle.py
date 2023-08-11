@@ -29,7 +29,7 @@ fileName = 'settings.yaml'
 filePath = '/home/ase_intern/PycharmProjects/pickleTest/pickleProject'
 for distSet in distList:
     # Open YAML file and load settings
-    settingsFile = open((f'{filePath}/{fileName}', 'r'))
+    settingsFile = open(f'{filePath}/{fileName}', 'r')
     settingsDict = yaml.load(settingsFile, Loader=SafeLoader)
     settingsFile.close()
 
@@ -41,7 +41,7 @@ for distSet in distList:
     newSettings = prevSettings.copy()
     newSettings['distributions'] = distSet
 
-    settingsFile = open((f'{filePath}/{fileName}', 'w'))
+    settingsFile = open(f'{filePath}/{fileName}', 'w')
     yaml.safe_dump(newSettings, settingsFile)
     settingsFile.close()
 
