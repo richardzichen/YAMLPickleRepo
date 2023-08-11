@@ -15,13 +15,13 @@ def loadSettings(fileName='settings.yaml'):
 def addSettings(key, value, fileName='settings.yaml'):
     # load YAML file into settings dict
     filePath = '/home/ase_intern/PycharmProjects/pickleTest/pickleProject'
-    settingsFile = open((f'{filePath}/{fileName}', 'r'))
+    settingsFile = open(f'{filePath}/{fileName}', 'r')
     settings = yaml.load(settingsFile, Loader=SafeLoader)
     settingsFile.close()
 
     settings[key] = value
 
-    settingsFile = open((f'{filePath}/{fileName}', 'w'))
+    settingsFile = open(f'{filePath}/{fileName}', 'w')
     yaml.safe_dump(settings, settingsFile)
     settingsFile.close()
 
